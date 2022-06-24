@@ -4,7 +4,7 @@ data "aws_route53_zone" "route53_zone" {
 }
 
 resource "aws_acm_certificate" "cert" {
-  domain_name       = data.aws_route53_zone.route53_zone.name
+  domain_name       = length(var.sub_domain) > 0 ? "${var.sub_domain}.${data.aws_route53_zone.route53_zone.name}" : data.aws_route53_zone.route53_zone.name
   validation_method = var.validation_method
 
   tags = var.tags
