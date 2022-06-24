@@ -36,3 +36,5 @@ module "certificate" {
 | domain_name | A domain name for which the certificate should be issued | `String` | `N/A` | Yes
 | validation_method | Which method to use for validation. DNS or EMAIL are valid, NONE can be used for certificates that were imported into ACM and then into Terraform. | `String` | `DNS` | No
 | allow_overwrite | Whether to allow overwriting existing records in route53 | `Boolean` | `True` | No
+| is_private_zone | Whether the domain is private or public | `Boolean` | `False` | No
+| tags | Tag for resources | `Map` | `{}` | No

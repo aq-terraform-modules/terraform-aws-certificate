@@ -14,6 +14,8 @@ variable "allow_overwrite" {
 
 variable "tags" {
   description = "Tags for the certificate"
+  type = map
+  default = {}
 }
 
 variable "is_private_zone" {
