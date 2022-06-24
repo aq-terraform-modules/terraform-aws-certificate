@@ -7,7 +7,7 @@ Currently this module only supports AWS managed certificates only due to persona
 ## Usage
 ```hcl
 module "certificate" {
-  source = "aq-terraform-modules/terraform-aws-certificate"
+  source  = "aq-terraform-modules/certificate/aws"
   version = "1.0.0"
 
   domain = "example.com"
