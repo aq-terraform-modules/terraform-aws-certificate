@@ -15,3 +15,9 @@ variable "allow_overwrite" {
 variable "tags" {
   description = "Tags for the certificate"
 }
+
+variable "is_private_zone" {
+  description = "Is the Route53 zone is private"
+  type = bool
+  default = false
+}
