@@ -11,3 +11,7 @@ variable "allow_overwrite" {
   description = "Allow record to be overwritten"
   default     = true
 }
+
+variable "tags" {
+  description = "Tags for the certificate"
+}
